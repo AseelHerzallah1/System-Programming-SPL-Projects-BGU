@@ -1,66 +1,58 @@
-# System-Programming-SPL-Projects-BGU
-Projects for the System Programming course at BGU. Hands-on C++ and Java assignments covering runtime environments (Unix, JVM), concurrency, memory management, OOP, and sockets. From server-client communication to game logic and system design, each project emphasizes practical application and efficient programming practices.
+# SPL Course Projects – Ben-Gurion University  
 
-#Assignments:
+This repository contains my programming assignments for the **System Programming (SPL)** course at BGU.  
+The projects cover **concurrency, networking, object-oriented design, and memory management** in **Java, C++, and JavaScript**.  
 
-1. Set Card Game (Java)
+---
 
-General Description:
-An implementation of the Set card game, designed to practice multi-threading and concurrency in Java. Players (human or computer-controlled) compete to find valid sets, while a dealer manages the game flow, synchronization, and scoring.
+## 📌 Assignments  
 
-Key Features:
+### 1️⃣ Set Card Game (Java)  
+**General Description:**  
+Implementation of the classic *Set* card game to practice **multi-threading and concurrency**. Players (human or AI) compete in real-time, while a dealer manages the game flow, synchronization, and scoring.  
 
-Full simulation of the Set card game with 81 cards and four attributes (color, number, shape, shading).
+**Key Features:**  
+- Full simulation of the *Set* card game with 81 cards and 4 attributes (color, number, shape, shading).  
+- **Multi-threaded players** with human keyboard input and simulated computer players.  
+- Dealer thread controls game flow: validates sets, reshuffles cards, assigns penalties/rewards.  
+- **Synchronization & fairness** to prevent race conditions and ensure liveness.  
+- Visual **GUI** for gameplay interaction and updates.  
 
-Multi-threaded players with human keyboard input and simulated AI players.
+**Technologies:**  
+`Java` · `Threads` · `Concurrency` · `Synchronization` · `Maven`  
 
-Dealer thread coordinates game state, checks sets, reshuffles cards, and handles penalties.
+---
 
-Real-time concurrency with synchronization mechanisms to ensure fairness and liveness.
+### 2️⃣ TFTP Server and Client (Java)  
+**General Description:**  
+Implementation of an extended **TFTP (Trivial File Transfer Protocol)** system using a **Thread-per-Client model**. Supports file transfer operations, client logins, and **bi-directional messaging** between clients and the server.  
 
-GUI provided for visual gameplay with dynamic updates.
+**Key Features:**  
+- **Login system** with unique usernames.  
+- File operations: **upload (WRQ)**, **download (RRQ)**, **delete (DELRQ)**, and **directory listing (DIRQ)**.  
+- **Broadcast (BCAST)** messages when files are added or removed.  
+- Robust **error handling** (file not found, already exists, invalid operations, etc.).  
+- Two-threaded client:  
+  - Keyboard thread (user input)  
+  - Listening thread (server responses)  
 
-Technologies:
-Java · Threads · Concurrency · Synchronization · Maven
+**Technologies:**  
+`Java` · `TCP Networking` · `Multi-threading` · `Bi-directional Protocols` · `Maven`  
 
-2. TFTP Server and Client (Java)
+---
 
-General Description:
-Implementation of an extended TFTP (Trivial File Transfer Protocol) system using a Thread-per-Client model. The project includes both client and server applications, supporting file transfer operations over TCP and bi-directional messaging between clients and the server.
+### 3️⃣ Food Warehouse Management System (C++)  
+**General Description:**  
+Simulation of a food warehouse to practice **object-oriented design** and **memory management** in C++. The system models volunteers, customers, and order handling while ensuring efficiency and correctness.  
 
-Key Features:
+**Key Features:**  
+- Multiple customer and volunteer roles (collectors, drivers, limited roles).  
+- Order lifecycle: **Pending → Collecting → Delivering → Completed**.  
+- Commands for adding customers, placing orders, checking statuses, and simulating steps.  
+- **Backup & Restore** functionality for saving and restoring system state.  
+- Strong emphasis on **Rule of 5** and avoiding memory leaks.  
 
-Login with unique usernames for clients.
+**Technologies:**  
+`C++` · `OOP` · `Rule of 5` · `Data Structures` · `Memory Management`  
 
-File operations: upload (WRQ), download (RRQ), delete (DELRQ), and directory listing (DIRQ).
-
-Broadcast (BCAST) messages for file additions/deletions.
-
-Bi-directional messaging enabling both server-client and peer communication.
-
-Robust error handling (file not found, file already exists, user not logged in, etc.).
-
-Two-threaded client: one thread for user input, one for server responses.
-
-Technologies:
-Java · TCP Networking · Multi-threading · Bi-directional Protocols · Maven
-
-3. Food Warehouse Management System (C++)
-
-General Description:
-A simulation of a food warehouse that manages volunteers, customers, and orders. The system models daily warehouse operations such as placing orders, collecting, delivering, and tracking their status. Built with a strong emphasis on object-oriented design and efficient memory management in C++.
-
-Key Features:
-
-Customers and volunteers with unique roles (collectors, drivers, limited roles).
-
-Order lifecycle: pending → collecting → delivering → completed.
-
-Interactive commands for adding customers, placing orders, checking statuses, and running simulation steps.
-
-Support for warehouse backup and restore.
-
-Memory safety using the Rule of 5, avoiding leaks and ensuring efficiency.
-
-Technologies:
-C++ · OOP · Rule of 5 · Data Structures · Memory Management
+---
